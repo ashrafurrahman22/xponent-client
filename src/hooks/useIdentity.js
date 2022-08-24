@@ -4,7 +4,7 @@ const useIdentity = () =>{
     const [identities, setIdentities] = useState([]);
 
     useEffect( ()=>{
-        fetch('http://localhost:5000/identity')
+        fetch('https://shielded-reef-80315.herokuapp.com/identity')
         .then(res => res.json())
         .then(data => setIdentities(data))
     } , [identities])

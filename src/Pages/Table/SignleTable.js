@@ -23,7 +23,7 @@ const SignleTable = ({identity}) => {
   
       const onSubmit = data =>{
           console.log(data)
-        const url = `http://localhost:5000/identity/${identityId}`
+        const url = `https://shielded-reef-80315.herokuapp.com/identity/${identityId}`
         fetch(url, {
           method : 'PUT',
           headers : {
@@ -44,7 +44,7 @@ const SignleTable = ({identity}) => {
      const handleDelete = id =>{
         const procede = window.confirm('Are You Sure?');
         if(procede){
-          const url = `http://localhost:5000/identity/${id}`
+          const url = `https://shielded-reef-80315.herokuapp.com/identity/${id}`
           fetch(url, {
             method : "DELETE"
           })

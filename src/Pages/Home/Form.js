@@ -8,7 +8,7 @@ const Form = () => {
 
     const handleform = event =>{
           console.log(event);
-          fetch('http://localhost:5000/identity', {
+          fetch('https://shielded-reef-80315.herokuapp.com/identity', {
             method : "POST", 
             headers : {
               'content-type' : 'application/json'
@@ -25,7 +25,7 @@ const Form = () => {
 
     return (
         <div className='card card-body bg-base-300 w-2/4 mx-auto'>
-        <h2 className='uppercase text-3xl text-center font-semibold my-2'>Please Fill Up This form</h2>
+        <h2 className='text-3xl text-center font-semibold my-2'>Fill Up This form</h2>
         
         <div className='px-3 pt-6'>
         <form className='flex flex-col' onSubmit={handleSubmit(handleform)}>
