@@ -8,19 +8,19 @@ const Form = () => {
 
     const handleform = event =>{
           console.log(event);
-        //   fetch('https://sheltered-headland-87932.herokuapp.com/order', {
-        //     method : "POST", 
-        //     headers : {
-        //       'content-type' : 'application/json'
-        //     },
-        //     body :JSON.stringify(event)
-        //   })
-        //   .then(res => res.json())
-        //   .then(data => {
-        //     toast.success('You Successfully added your identity')
-        //     console.log(data)
-        //     reset();
-        //   } )
+          fetch('http://localhost:5000/identity', {
+            method : "POST", 
+            headers : {
+              'content-type' : 'application/json'
+            },
+            body :JSON.stringify(event)
+          })
+          .then(res => res.json())
+          .then(data => {
+            toast.success('You Successfully added your identity on database')
+            console.log(data)
+            reset();
+          } )
         }
 
     return (
