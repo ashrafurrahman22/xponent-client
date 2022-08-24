@@ -9,6 +9,7 @@ function App() {
 
     <Routes>
         <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/identity/:identityId" element={<Home></Home>}></Route>
     </Routes>
     <ToastContainer />
     </div>
